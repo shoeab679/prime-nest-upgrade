@@ -24,10 +24,42 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: 'Modern Wardrobe Hinged Doors',
+      title: 'Modern Hinged Door Wardrobe',
       category: 'wardrobe',
       image: '/images/portfolio/modern-wardrobe-hinged-doors.jpg',
       description: 'Contemporary wardrobe with hinged door design and spacious storage',
+      location: 'Hyderabad'
+    },
+    {
+      id: 12,
+      title: 'Premium Hinged Wardrobe',
+      category: 'wardrobe',
+      image: '/images/portfolio/pu-panel-luxury-wardrobes.jpg',
+      description: 'Elegant hinged wardrobe with clean white finish and full-height design',
+      location: 'Hyderabad'
+    },
+    {
+      id: 13,
+      title: 'Luxury Sliding Wardrobe',
+      category: 'wardrobe',
+      image: '/images/portfolio/sliding-wardrobes.jpg',
+      description: 'Premium sliding wardrobe with walnut wood finish and gold accents',
+      location: 'Hyderabad'
+    },
+    {
+      id: 14,
+      title: 'Premium Sliding Wardrobe',
+      category: 'wardrobe',
+      image: '/images/portfolio/sliding-wardrobe-premium-2.jpg',
+      description: 'Modern sliding wardrobe with curved panel design and ambient lighting',
+      location: 'Hyderabad'
+    },
+    {
+      id: 15,
+      title: 'Beige Sliding Wardrobe',
+      category: 'wardrobe',
+      image: '/images/portfolio/sliding-wardrobes-2.jpg',
+      description: 'Elegant beige sliding wardrobe with gold trim and open shelving',
       location: 'Hyderabad'
     },
     {
@@ -63,19 +95,35 @@ export default function Projects() {
       location: 'Hyderabad'
     },
     {
-      id: 8,
-      title: 'PU Panel Luxury Wardrobes',
-      category: 'wardrobe',
-      image: '/images/portfolio/pu-panel-luxury-wardrobes.jpg',
-      description: 'Luxury wardrobe with PU panel and hinged doors for premium look',
+      id: 16,
+      title: 'Teal Modular Kitchen',
+      category: 'kitchen',
+      image: '/images/portfolio/open-modular-kitchen.jpg',
+      description: 'Contemporary teal modular kitchen with LED lighting and premium countertops',
       location: 'Hyderabad'
     },
     {
-      id: 9,
-      title: 'Sliding Wardrobes',
-      category: 'wardrobe',
-      image: '/images/portfolio/sliding-wardrobes.jpg',
-      description: 'Modern sliding wardrobe with sleek design and space-saving functionality',
+      id: 17,
+      title: 'Parallel Kitchen Design',
+      category: 'kitchen',
+      image: '/images/portfolio/parallel-kitchen-1.jpg',
+      description: 'Sleek parallel kitchen with wooden upper cabinets and modern appliances',
+      location: 'Hyderabad'
+    },
+    {
+      id: 18,
+      title: 'U-Shape Modular Kitchen',
+      category: 'kitchen',
+      image: '/images/portfolio/u-shape-kitchen.jpg',
+      description: 'Spacious U-shaped modular kitchen with black and white contrast design',
+      location: 'Hyderabad'
+    },
+    {
+      id: 19,
+      title: 'Straight Modular Kitchen',
+      category: 'kitchen',
+      image: '/images/portfolio/parallel-kitchen-2.jpg',
+      description: 'Modern straight kitchen layout with premium wooden cabinetry',
       location: 'Hyderabad'
     },
     {
