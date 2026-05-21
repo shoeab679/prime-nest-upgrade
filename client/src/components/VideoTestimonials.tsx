@@ -17,7 +17,7 @@ const videoTestimonials: VideoTestimonial[] = [
     clientName: 'Priya Sharma',
     clientRole: 'Apartment Owner',
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    thumbnailUrl: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/modular-kitchen-premium-5tiQTLo4SDZPs3T5swY5qE.webp',
+    thumbnailUrl: '/images/modular-kitchen-premium.webp',
     quote: 'Prime Nest transformed our apartment into a dream home. The attention to detail was exceptional.'
   },
   {
@@ -25,7 +25,7 @@ const videoTestimonials: VideoTestimonial[] = [
     clientName: 'Rajesh Kumar',
     clientRole: 'Villa Owner',
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    thumbnailUrl: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
+    thumbnailUrl: '/images/hero-main.webp',
     quote: 'Excellent service from consultation to installation. The team understood our vision perfectly.'
   },
   {
@@ -33,7 +33,7 @@ const videoTestimonials: VideoTestimonial[] = [
     clientName: 'Anjali Reddy',
     clientRole: 'Working Professional',
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    thumbnailUrl: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/modular-kitchen-premium-5tiQTLo4SDZPs3T5swY5qE.webp',
+    thumbnailUrl: '/images/wardrobe-hero.webp',
     quote: 'They made the entire process hassle-free. The quality of work and timely delivery impressed us.'
   },
   {
@@ -41,7 +41,7 @@ const videoTestimonials: VideoTestimonial[] = [
     clientName: 'Vikram Patel',
     clientRole: 'Business Owner',
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    thumbnailUrl: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
+    thumbnailUrl: '/images/tv-unit-hero.webp',
     quote: 'Professional team, premium quality, and excellent after-sales support. Highly recommended!'
   }
 ];

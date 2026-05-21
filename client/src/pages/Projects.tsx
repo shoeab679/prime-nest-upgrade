@@ -10,7 +10,7 @@ export default function Projects() {
       id: 1,
       title: 'Modern Bedroom',
       category: 'bedroom',
-      image: '/manus-storage/modern bedroom_f4fb7fe8.webp',
+      image: '/images/portfolio/modern-bedroom.jpg',
       description: 'Contemporary bedroom with modern furnishings and elegant design',
       location: 'Hyderabad'
     },
@@ -18,7 +18,7 @@ export default function Projects() {
       id: 2,
       title: 'L Type Modular Kitchen',
       category: 'kitchen',
-      image: '/manus-storage/L type modular kitchen_9993d51d.webp',
+      image: '/images/portfolio/L-type-modular-kitchen.jpeg',
       description: 'Modern L-shaped modular kitchen with sleek design and premium finishes',
       location: 'Hyderabad'
     },
@@ -26,7 +26,7 @@ export default function Projects() {
       id: 3,
       title: 'Modern Wardrobe Hinged Doors',
       category: 'wardrobe',
-      image: '/manus-storage/modern wardobe hinged doors_f2695572.webp',
+      image: '/images/portfolio/modern-wardrobe-hinged-doors.jpg',
       description: 'Contemporary wardrobe with hinged door design and spacious storage',
       location: 'Hyderabad'
     },
@@ -34,7 +34,7 @@ export default function Projects() {
       id: 4,
       title: 'Luxury TV Unit',
       category: 'tv-unit',
-      image: '/manus-storage/luxury TV unit_1a216d1c.webp',
+      image: '/images/portfolio/luxury-tv-unit.jpg',
       description: 'Elegant luxury TV unit with premium finishes and sophisticated design',
       location: 'Hyderabad'
     },
@@ -42,7 +42,7 @@ export default function Projects() {
       id: 5,
       title: 'Open Modular Kitchen',
       category: 'kitchen',
-      image: '/manus-storage/open modular kitchen_228dad42.webp',
+      image: '/images/portfolio/open-modular-kitchen.jpg',
       description: 'Open concept modular kitchen with contemporary styling and functionality',
       location: 'Hyderabad'
     },
@@ -50,7 +50,7 @@ export default function Projects() {
       id: 6,
       title: 'Luxury Full TV Unit',
       category: 'tv-unit',
-      image: '/manus-storage/luxury full Tv unit_d9317494.webp',
+      image: '/images/portfolio/luxury-full-tv-unit.jpg',
       description: 'Full-wall luxury TV unit with sophisticated design and ambient lighting',
       location: 'Hyderabad'
     },
@@ -58,7 +58,7 @@ export default function Projects() {
       id: 7,
       title: 'Premium TV Unit',
       category: 'tv-unit',
-      image: '/manus-storage/premium Tv Unit_4e4e9196.webp',
+      image: '/images/portfolio/premium-tv-unit.jpg',
       description: 'Premium TV unit with modern aesthetics and integrated storage',
       location: 'Hyderabad'
     },
@@ -66,7 +66,7 @@ export default function Projects() {
       id: 8,
       title: 'PU Panel Luxury Wardrobes',
       category: 'wardrobe',
-      image: '/manus-storage/pu panel luxury wardobes hinged doors_1794302d.webp',
+      image: '/images/portfolio/pu-panel-luxury-wardrobes.jpg',
       description: 'Luxury wardrobe with PU panel and hinged doors for premium look',
       location: 'Hyderabad'
     },
@@ -74,7 +74,7 @@ export default function Projects() {
       id: 9,
       title: 'Sliding Wardrobes',
       category: 'wardrobe',
-      image: '/manus-storage/sliding wardobes_ab62ef48.webp',
+      image: '/images/portfolio/sliding-wardrobes.jpg',
       description: 'Modern sliding wardrobe with sleek design and space-saving functionality',
       location: 'Hyderabad'
     },
@@ -82,7 +82,7 @@ export default function Projects() {
       id: 10,
       title: 'Kids Bedroom',
       category: 'bedroom',
-      image: '/manus-storage/kids bedroom_6b2a8d18.webp',
+      image: '/images/portfolio/kids-bedroom.jpg',
       description: 'Vibrant and functional kids bedroom design with playful elements',
       location: 'Hyderabad'
     },
@@ -90,7 +90,7 @@ export default function Projects() {
       id: 11,
       title: 'Prime Nest Kitchen',
       category: 'kitchen',
-      image: '/manus-storage/primenest-kitchen.jpg_b8c1850c.webp',
+      image: '/images/portfolio/primenest-kitchen.jpeg',
       description: 'Premium kitchen design from Prime Nest portfolio with premium finishes',
       location: 'Hyderabad'
     },

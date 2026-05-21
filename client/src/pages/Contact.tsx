@@ -50,7 +50,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section
         className="relative py-24 md:py-32 bg-cover bg-center"
-        style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80)' }}
+        style={{ backgroundImage: 'url(/images/contact-bg.jpg)' }}
       >
         <div className="absolute inset-0 bg-dark-accent/80" />
         <div className="container relative z-10">
@@ -219,7 +219,7 @@ export default function Contact() {
               className="space-y-8"
             >
               <img
-                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80"
+                src="/images/about-interior.jpg"
                 alt="Prime Nest Interiors showroom"
                 className="rounded-lg shadow-lg w-full h-64 object-cover"
                 loading="lazy"

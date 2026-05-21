@@ -27,7 +27,7 @@ export default function ModularKitchens() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/manus-storage/open modular kitchen_228dad42.webp)',
+            backgroundImage: 'url(/images/modular-kitchen-hero.webp)',
             backgroundAttachment: 'fixed',
           }}
         >
@@ -184,8 +184,8 @@ export default function ModularKitchens() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { img: '/manus-storage/L type modular kitchen_9993d51d.webp', title: 'Modern L-Shaped Kitchen' },
-              { img: '/manus-storage/open modular kitchen_228dad42.webp', title: 'Contemporary Open Kitchen' },
+              { img: '/images/portfolio/L-type-modular-kitchen.jpeg', title: 'Modern L-Shaped Kitchen' },
+              { img: '/images/portfolio/open-modular-kitchen.jpg', title: 'Contemporary Open Kitchen' },
             ].map((project, index) => (
               <motion.div
                 key={index}

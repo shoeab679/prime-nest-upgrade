@@ -23,28 +23,28 @@ export default function Home() {
       title: 'Modular Kitchens',
       description: 'Premium kitchen designs with smart storage and modern aesthetics',
       link: '/modular-kitchens',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80',
+      image: '/images/modular-kitchen.jpg',
     },
     {
       icon: Users,
       title: 'Wardrobes',
       description: 'Custom wardrobe solutions for organized and elegant bedrooms',
       link: '/wardrobes',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80',
+      image: '/images/wardrobe.jpg',
     },
     {
       icon: Zap,
       title: 'TV Units',
       description: 'Entertainment walls that blend functionality with premium design',
       link: '/tv-units',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80',
+      image: '/images/tv-unit.jpg',
     },
     {
       icon: Award,
       title: 'Full Home Interiors',
       description: 'Complete interior design solutions for your entire apartment',
       link: '/services',
-      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&q=80',
+      image: '/images/full-home.jpg',
     },
   ];
 
@@ -99,7 +99,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&q=90)',
+            backgroundImage: 'url(/images/hero-living-room.jpg)',
             backgroundAttachment: 'fixed',
           }}
         >
@@ -253,7 +253,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <img
-                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
+                src="/images/modular-kitchen.jpg"
                 alt="Premium modular kitchen design by Prime Nest Interiors"
                 className="rounded-lg shadow-lg w-full h-96 object-cover"
                 loading="lazy"

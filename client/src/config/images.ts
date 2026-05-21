@@ -22,7 +22,7 @@ export const portfolioImages: PortfolioImage[] = [
   },
   {
     id: 'kitchen-2',
-    src: '/images/portfolio/open-modular-kitchen.png',
+    src: '/images/portfolio/open-modular-kitchen.jpg',
     title: 'Open Modular Kitchen',
     description: 'Contemporary open kitchen design with marble countertops and integrated appliances',
     category: 'kitchen',
@@ -30,7 +30,7 @@ export const portfolioImages: PortfolioImage[] = [
   },
   {
     id: 'kitchen-3',
-    src: '/images/portfolio/primenest-kitchen.jpg.jpeg',
+    src: '/images/portfolio/primenest-kitchen.jpeg',
     title: 'Prime Nest Kitchen',
     description: 'Luxury kitchen with premium finishes and professional lighting',
     category: 'kitchen',
@@ -39,7 +39,7 @@ export const portfolioImages: PortfolioImage[] = [
   // Wardrobes
   {
     id: 'wardrobe-1',
-    src: '/images/portfolio/modern-wardobe-hinged-doors.png',
+    src: '/images/portfolio/modern-wardrobe-hinged-doors.jpg',
     title: 'Modern Wardrobe - Hinged Doors',
     description: 'Floor-to-ceiling wardrobe with mirror-hinged doors and LED lighting',
     category: 'wardrobe',
@@ -47,7 +47,7 @@ export const portfolioImages: PortfolioImage[] = [
   },
   {
     id: 'wardrobe-2',
-    src: '/images/portfolio/sliding-wardobes.png',
+    src: '/images/portfolio/sliding-wardrobes.jpg',
     title: 'Sliding Wardrobes',
     description: 'Space-saving sliding wardrobe design perfect for compact bedrooms',
     category: 'wardrobe',
@@ -55,7 +55,7 @@ export const portfolioImages: PortfolioImage[] = [
   },
   {
     id: 'wardrobe-3',
-    src: '/images/portfolio/pu-panel-luxury-wardobes-hinged-doors.png',
+    src: '/images/portfolio/pu-panel-luxury-wardrobes.jpg',
     title: 'PU Panel Luxury Wardrobes',
     description: 'Premium PU panel wardrobes with luxury hinged doors and sophisticated design',
     category: 'wardrobe',
@@ -64,7 +64,7 @@ export const portfolioImages: PortfolioImage[] = [
   // TV Units
   {
     id: 'tvunit-1',
-    src: '/images/portfolio/luxury-TV-unit.png',
+    src: '/images/portfolio/luxury-tv-unit.jpg',
     title: 'Luxury TV Unit',
     description: 'Elegant TV entertainment unit with ambient lighting and storage',
     category: 'tv-unit',
@@ -72,7 +72,7 @@ export const portfolioImages: PortfolioImage[] = [
   },
   {
     id: 'tvunit-2',
-    src: '/images/portfolio/luxury-full-Tv-unit.png',
+    src: '/images/portfolio/luxury-full-tv-unit.jpg',
     title: 'Luxury Full TV Unit',
     description: 'Complete entertainment wall with textured finishes and premium materials',
     category: 'tv-unit',
@@ -80,7 +80,7 @@ export const portfolioImages: PortfolioImage[] = [
   },
   {
     id: 'tvunit-3',
-    src: '/images/portfolio/premium-Tv-Unit.png',
+    src: '/images/portfolio/premium-tv-unit.jpg',
     title: 'Premium TV Unit',
     description: 'Modern TV unit with sophisticated design and integrated cable management',
     category: 'tv-unit',
@@ -89,7 +89,7 @@ export const portfolioImages: PortfolioImage[] = [
   // Bedrooms
   {
     id: 'bedroom-1',
-    src: '/images/portfolio/kids-bedroom.png',
+    src: '/images/portfolio/kids-bedroom.jpg',
     title: 'Kids Bedroom',
     description: 'Colorful and functional kids bedroom with custom storage solutions',
     category: 'bedroom',
@@ -97,7 +97,7 @@ export const portfolioImages: PortfolioImage[] = [
   },
   {
     id: 'bedroom-2',
-    src: '/images/portfolio/modern-bedroom.png',
+    src: '/images/portfolio/modern-bedroom.jpg',
     title: 'Modern Bedroom',
     description: 'Serene and luxurious master bedroom with premium finishes',
     category: 'bedroom',

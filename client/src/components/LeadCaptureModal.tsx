@@ -105,7 +105,7 @@ export default function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCapt
             <div
               className="absolute inset-0 bg-cover bg-center opacity-80"
               style={{
-                backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/modular-kitchen-premium-5tiQTLo4SDZPs3T5swY5qE.webp)',
+                backgroundImage: 'url(/images/modular-kitchen-premium.webp)',
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

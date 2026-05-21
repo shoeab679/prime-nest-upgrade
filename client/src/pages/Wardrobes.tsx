@@ -27,7 +27,7 @@ export default function Wardrobes() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/manus-storage/modern wardobe hinged doors_f2695572.webp)',
+            backgroundImage: 'url(/images/wardrobe-hero.webp)',
             backgroundAttachment: 'fixed',
           }}
         >
@@ -184,8 +184,8 @@ export default function Wardrobes() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { img: '/manus-storage/modern wardobe hinged doors_f2695572.webp', title: 'Modern Wardrobe Hinged Doors' },
-              { img: '/manus-storage/sliding wardobes_ab62ef48.webp', title: 'Modern Sliding Door Wardrobe' },
+              { img: '/images/portfolio/modern-wardrobe-hinged-doors.jpg', title: 'Modern Wardrobe Hinged Doors' },
+              { img: '/images/portfolio/sliding-wardrobes.jpg', title: 'Modern Sliding Door Wardrobe' },
             ].map((project, index) => (
               <motion.div
                 key={index}

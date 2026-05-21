@@ -27,7 +27,7 @@ export default function TVUnits() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/manus-storage/luxury TV unit_1a216d1c.webp)',
+            backgroundImage: 'url(/images/tv-unit-hero.webp)',
             backgroundAttachment: 'fixed',
           }}
         >
@@ -184,8 +184,8 @@ export default function TVUnits() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { img: '/manus-storage/luxury TV unit_1a216d1c.webp', title: 'Modern Wall-Mounted Unit' },
-              { img: '/manus-storage/luxury full Tv unit_d9317494.webp', title: 'Contemporary Entertainment Wall' },
+              { img: '/images/portfolio/luxury-tv-unit.jpg', title: 'Modern Wall-Mounted Unit' },
+              { img: '/images/portfolio/luxury-full-tv-unit.jpg', title: 'Contemporary Entertainment Wall' },
             ].map((project, index) => (
               <motion.div
                 key={index}

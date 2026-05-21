@@ -96,7 +96,7 @@ export default function About() {
               className="relative h-80 rounded-lg overflow-hidden shadow-lg"
             >
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp"
+                src="/images/about-interior.jpg"
                 alt="Prime Nest Interiors Studio"
                 className="w-full h-full object-cover"
               />
