@@ -47,7 +47,6 @@ export default function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCapt
     e.preventDefault();
     if (!validateForm()) return;
 
-    // Save to database
     try {
       await createLead.mutateAsync({
         name: formData.fullName,
@@ -59,18 +58,14 @@ export default function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCapt
       console.error('Failed to save lead:', err);
     }
 
-    // Show success message
     setSubmitted(true);
 
-    // Send to WhatsApp
     const message = `Hi Prime Nest Interiors, I'm interested in interior design consultation. Name: ${formData.fullName}, Mobile: ${formData.mobileNumber}, City: ${formData.city}, Property Type: ${formData.propertyType}${formData.budgetRange ? `, Budget: ${formData.budgetRange}` : ''}`;
     const whatsappUrl = `https://wa.me/919542663490?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 
-    // Call parent onSubmit
     onSubmit(formData);
 
-    // Reset form after 2 seconds
     setTimeout(() => {
       setSubmitted(false);
       setFormData({ fullName: '', mobileNumber: '+91', city: '', propertyType: '', budgetRange: '' });
@@ -82,110 +77,100 @@ export default function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCapt
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-end md:items-center justify-center"
       onClick={onClose}
     >
+      {/* Modal container: bottom sheet on mobile, centered card on desktop */}
       <div
-        className="relative w-full max-w-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl shadow-2xl overflow-hidden"
+        className="relative w-full md:max-w-lg bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 
+                   rounded-t-2xl md:rounded-2xl shadow-2xl overflow-hidden
+                   max-h-[85vh] md:max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* Drag handle indicator for mobile */}
+        <div className="flex justify-center pt-3 pb-1 md:hidden">
+          <div className="w-10 h-1 bg-slate-600 rounded-full" />
+        </div>
+
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 text-white"
+          className="absolute top-3 right-3 z-10 w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-all duration-300 text-white"
           aria-label="Close"
         >
-          <X className="w-6 h-6" />
+          <X className="w-4 h-4" />
         </button>
 
-        {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-          {/* Left Side - Hero Image */}
-          <div className="hidden md:block relative h-full min-h-96 bg-gradient-to-br from-amber-400 to-amber-600 overflow-hidden">
-            <div
-              className="absolute inset-0 bg-cover bg-center opacity-80"
-              style={{
-                backgroundImage: 'url(/images/modular-kitchen-premium.webp)',
-              }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-              <h3 className="text-2xl font-bold mb-2">Transform Your Space</h3>
-              <p className="text-sm text-gray-200">Premium interior designs for modern living</p>
-            </div>
-          </div>
+        {/* Form Content */}
+        <div className="px-5 pb-6 pt-2 md:px-8 md:pb-8 md:pt-6">
+          {!submitted ? (
+            <>
+              {/* Header - compact on mobile */}
+              <div className="mb-4 md:mb-6 pr-8">
+                <h2 className="text-lg md:text-2xl font-bold text-white leading-snug">
+                  Get Free Interior Design Consultation
+                </h2>
+                <p className="text-gray-400 text-xs md:text-sm mt-1">Prime Nest Interiors · Hyderabad</p>
+                <div className="w-10 h-0.5 bg-gradient-to-r from-amber-400 to-amber-600 mt-3" />
+              </div>
 
-          {/* Right Side - Form */}
-          <div className="p-8 md:p-10">
-            {!submitted ? (
-              <>
-                {/* Header */}
-                <div className="mb-8">
-                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                    Get Free Interior Design Consultation + Free Quote
-                  </h2>
-                  <p className="text-gray-300 text-sm">Design your dream home with Prime Nest Interiors</p>
-                  <div className="w-12 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mt-4"></div>
+              {/* Form */}
+              <form onSubmit={handleSubmit} className="space-y-3">
+                {/* Full Name */}
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    value={formData.fullName}
+                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                    className={`w-full px-3 py-2.5 text-sm bg-slate-700/50 border ${
+                      errors.fullName ? 'border-red-500' : 'border-slate-600'
+                    } rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors`}
+                  />
+                  {errors.fullName && <p className="text-red-400 text-xs mt-1">{errors.fullName}</p>}
                 </div>
 
-                {/* Form */}
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* Full Name */}
+                {/* Mobile Number */}
+                <div>
+                  <input
+                    type="tel"
+                    placeholder="+91 98765 43210"
+                    value={formData.mobileNumber}
+                    onChange={(e) => {
+                      let val = e.target.value;
+                      if (!val.startsWith('+91')) val = '+91' + val.replace(/\D/g, '').slice(0, 10);
+                      setFormData({ ...formData, mobileNumber: val });
+                    }}
+                    className={`w-full px-3 py-2.5 text-sm bg-slate-700/50 border ${
+                      errors.mobileNumber ? 'border-red-500' : 'border-slate-600'
+                    } rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors`}
+                  />
+                  {errors.mobileNumber && <p className="text-red-400 text-xs mt-1">{errors.mobileNumber}</p>}
+                </div>
+
+                {/* City and Property Type - side by side on mobile */}
+                <div className="grid grid-cols-2 gap-2">
                   <div>
                     <input
                       type="text"
-                      placeholder="Full Name"
-                      value={formData.fullName}
-                      onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className={`w-full px-4 py-3 bg-slate-700/50 border ${
-                        errors.fullName ? 'border-red-500' : 'border-slate-600'
-                      } rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors`}
-                    />
-                    {errors.fullName && <p className="text-red-400 text-xs mt-1">{errors.fullName}</p>}
-                  </div>
-
-                  {/* Mobile Number */}
-                  <div>
-                    <input
-                      type="tel"
-                      placeholder="+91 98765 43210"
-                      value={formData.mobileNumber}
-                      onChange={(e) => {
-                        let val = e.target.value;
-                        if (!val.startsWith('+91')) val = '+91' + val.replace(/\D/g, '').slice(0, 10);
-                        setFormData({ ...formData, mobileNumber: val });
-                      }}
-                      className={`w-full px-4 py-3 bg-slate-700/50 border ${
-                        errors.mobileNumber ? 'border-red-500' : 'border-slate-600'
-                      } rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors`}
-                    />
-                    {errors.mobileNumber && <p className="text-red-400 text-xs mt-1">{errors.mobileNumber}</p>}
-                  </div>
-
-                  {/* City/Area */}
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="City / Area (e.g., Hyderabad, Jubilee Hills)"
+                      placeholder="City / Area"
                       value={formData.city}
                       onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                      className={`w-full px-4 py-3 bg-slate-700/50 border ${
+                      className={`w-full px-3 py-2.5 text-sm bg-slate-700/50 border ${
                         errors.city ? 'border-red-500' : 'border-slate-600'
                       } rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-amber-500 transition-colors`}
                     />
                     {errors.city && <p className="text-red-400 text-xs mt-1">{errors.city}</p>}
                   </div>
-
-                  {/* Property Type */}
                   <div>
                     <select
                       value={formData.propertyType}
                       onChange={(e) => setFormData({ ...formData, propertyType: e.target.value })}
-                      className={`w-full px-4 py-3 bg-slate-700/50 border ${
+                      className={`w-full px-3 py-2.5 text-sm bg-slate-700/50 border ${
                         errors.propertyType ? 'border-red-500' : 'border-slate-600'
                       } rounded-lg text-white focus:outline-none focus:border-amber-500 transition-colors`}
                     >
-                      <option value="">Select Property Type</option>
+                      <option value="">Property</option>
                       <option value="1 BHK">1 BHK</option>
                       <option value="2 BHK">2 BHK</option>
                       <option value="3 BHK">3 BHK</option>
@@ -195,92 +180,69 @@ export default function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCapt
                     </select>
                     {errors.propertyType && <p className="text-red-400 text-xs mt-1">{errors.propertyType}</p>}
                   </div>
-
-                  {/* Budget Range - Collapsible */}
-                  <div className="pt-2">
-                    <button
-                      type="button"
-                      onClick={() => setShowBudget(!showBudget)}
-                      className="text-amber-400 text-sm font-medium hover:text-amber-300 transition-colors"
-                    >
-                      {showBudget ? '▼' : '▶'} Help us understand your project better
-                    </button>
-                    {showBudget && (
-                      <select
-                        value={formData.budgetRange}
-                        onChange={(e) => setFormData({ ...formData, budgetRange: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white mt-3 focus:outline-none focus:border-amber-500 transition-colors"
-                      >
-                        <option value="">Select Budget Range</option>
-                        <option value="Under ₹5L">Under ₹5L</option>
-                        <option value="₹5L–10L">₹5L–10L</option>
-                        <option value="₹10L–20L">₹10L–20L</option>
-                        <option value="₹20L+">₹20L+</option>
-                        <option value="Not sure yet">Not sure yet</option>
-                      </select>
-                    )}
-                  </div>
-
-                  {/* CTA Button */}
-                  <button
-                    type="submit"
-                    disabled={createLead.isPending}
-                    className="w-full mt-6 px-6 py-3 bg-gradient-to-r from-amber-400 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
-                  >
-                    {createLead.isPending ? 'Submitting...' : 'Get Free Consultation'}
-                  </button>
-
-                  {/* Trust Badges */}
-                  <div className="grid grid-cols-2 gap-3 mt-6 pt-6 border-t border-slate-700">
-                    <div className="flex items-center gap-2 text-xs text-gray-300">
-                      <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                      Free Consultation
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-gray-300">
-                      <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                      Transparent Pricing
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-gray-300">
-                      <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                      Expert Designers
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-gray-300">
-                      <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                      End-to-End Execution
-                    </div>
-                  </div>
-
-                  {/* Social Proof */}
-                  <div className="mt-4 pt-4 border-t border-slate-700 space-y-2">
-                    <div className="flex items-center gap-2 text-xs text-gray-300">
-                      <span className="text-amber-400">⭐</span>
-                      100+ Happy Clients
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-gray-300">
-                      <span className="text-amber-400">⭐</span>
-                      Hyderabad Service Available
-                    </div>
-                  </div>
-
-                  {/* Privacy Text */}
-                  <p className="text-xs text-gray-400 mt-4 text-center">
-                    We never share your information.
-                  </p>
-                </form>
-              </>
-            ) : (
-              /* Success Message */
-              <div className="flex flex-col items-center justify-center py-12">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center mb-4">
-                  <CheckCircle2 className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
-                <p className="text-gray-300 text-center">
-                  Our team will contact you shortly. Check your WhatsApp for a direct message.
+
+                {/* Budget Range - Collapsible */}
+                <div>
+                  <button
+                    type="button"
+                    onClick={() => setShowBudget(!showBudget)}
+                    className="text-amber-400 text-xs font-medium hover:text-amber-300 transition-colors"
+                  >
+                    {showBudget ? '▼' : '▶'} Help us understand your project better
+                  </button>
+                  {showBudget && (
+                    <select
+                      value={formData.budgetRange}
+                      onChange={(e) => setFormData({ ...formData, budgetRange: e.target.value })}
+                      className="w-full px-3 py-2.5 text-sm bg-slate-700/50 border border-slate-600 rounded-lg text-white mt-2 focus:outline-none focus:border-amber-500 transition-colors"
+                    >
+                      <option value="">Select Budget Range</option>
+                      <option value="Under ₹5L">Under ₹5L</option>
+                      <option value="₹5L–10L">₹5L–10L</option>
+                      <option value="₹10L–20L">₹10L–20L</option>
+                      <option value="₹20L+">₹20L+</option>
+                      <option value="Not sure yet">Not sure yet</option>
+                    </select>
+                  )}
+                </div>
+
+                {/* CTA Button */}
+                <button
+                  type="submit"
+                  disabled={createLead.isPending}
+                  className="w-full mt-2 px-6 py-3 bg-gradient-to-r from-amber-400 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-white font-semibold text-sm rounded-lg transition-all duration-300 shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {createLead.isPending ? 'Submitting...' : 'Get Free Consultation'}
+                </button>
+
+                {/* Trust Badges - compact 4-column row on mobile */}
+                <div className="grid grid-cols-2 gap-2 pt-3 border-t border-slate-700">
+                  {['Free Consultation', 'Transparent Pricing', 'Expert Designers', 'End-to-End Execution'].map((item) => (
+                    <div key={item} className="flex items-center gap-1.5 text-xs text-gray-300">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 flex-shrink-0" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+
+                <p className="text-xs text-gray-500 text-center pt-1">
+                  We never share your information.
                 </p>
+              </form>
+            </>
+          ) : (
+            /* Success Message */
+            <div className="flex flex-col items-center justify-center py-10">
+              <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center mb-4">
+                <CheckCircle2 className="w-8 h-8 text-white" />
               </div>
-            )}
-          </div>
+              <h3 className="text-xl font-bold text-white mb-2">Thank You!</h3>
+              <p className="text-gray-300 text-sm text-center">
+                Our team will contact you shortly. Check your WhatsApp for a direct message.
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
