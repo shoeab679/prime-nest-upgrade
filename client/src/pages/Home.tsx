@@ -253,8 +253,8 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <img
-                src="/images/modular-kitchen.jpg"
-                alt="Premium modular kitchen design by Prime Nest Interiors"
+                src="/images/why-choose-us.jpg"
+                alt="Interior design team presenting 3D visualization to clients"
                 className="rounded-lg shadow-lg w-full h-96 object-cover"
                 loading="lazy"
               />

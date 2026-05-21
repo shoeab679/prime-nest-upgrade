@@ -9,7 +9,7 @@ export default function Services() {
       title: 'Modular Kitchens',
       description: 'Premium modular kitchens with smart storage, modern appliances, and elegant finishes. Designed for functionality and style.',
       features: ['Custom cabinetry', 'Premium appliances', 'Smart storage solutions', 'Marble countertops', 'Soft-close drawers'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/modular-kitchen-hero-fVA6XDjV888HcQWG6MKm4e.webp',
+      image: '/images/modular-kitchen.jpg',
       href: '/modular-kitchens'
     },
     {
@@ -17,7 +17,7 @@ export default function Services() {
       title: 'Wardrobes',
       description: 'Custom wardrobe designs with elegant finishes, optimal organization, and premium hardware. Perfect for any bedroom.',
       features: ['Custom designs', 'Mirror panels', 'Soft lighting', 'Organized storage', 'Premium hardware'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/wardrobe-hero-SszToUGjbHzLbhyFFZkXZc.webp',
+      image: '/images/wardrobe.jpg',
       href: '/wardrobes'
     },
     {
@@ -25,7 +25,7 @@ export default function Services() {
       title: 'TV Units',
       description: 'Sophisticated entertainment walls with integrated storage, ambient lighting, and minimalist design.',
       features: ['Wall-mounted design', 'Integrated storage', 'Ambient lighting', 'Cable management', 'Modern aesthetics'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/tv-unit-hero-k4TQq6BN327dQWVJAMdthY.webp',
+      image: '/images/tv-unit.jpg',
       href: '/tv-units'
     },
     {
@@ -33,7 +33,7 @@ export default function Services() {
       title: 'Bedroom Interiors',
       description: 'Luxurious bedroom designs creating serene and comfortable spaces with premium furnishings and lighting.',
       features: ['Custom bed designs', 'Ambient lighting', 'Premium finishes', 'Storage solutions', 'Relaxing aesthetics'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/wardrobe-hero-SszToUGjbHzLbhyFFZkXZc.webp',
+      image: '/images/bedroom.jpg',
       href: '/services'
     },
     {
@@ -41,7 +41,7 @@ export default function Services() {
       title: 'Living Room Interiors',
       description: 'Elegant living spaces designed for modern family living with comfortable seating and entertainment areas.',
       features: ['Custom furniture', 'Accent walls', 'Lighting design', 'Storage integration', 'Entertainment zones'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
+      image: '/images/living-room-services.jpg',
       href: '/services'
     },
     {
@@ -49,7 +49,7 @@ export default function Services() {
       title: 'Full Home Interiors',
       description: 'Complete home transformation with cohesive design throughout all spaces. End-to-end interior solutions.',
       features: ['Complete design', 'All rooms covered', 'Cohesive aesthetics', 'Project management', 'Quality assurance'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
+      image: '/images/full-home-services.jpg',
       href: '/services'
     },
   ];
