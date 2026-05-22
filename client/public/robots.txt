@@ -1,4 +1,59 @@
+# Robots.txt for Prime Nest Interiors
+# https://primenestinteriors.in/
+
+# Allow all search engines
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /api
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /search
+Disallow: /404
 
-Sitemap: https://primenestinteriors.com/sitemap.xml
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for other bots
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 0.5
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://primenestinteriors.in/sitemap.xml
+
+# Cache rules
+Cache-Control: max-age=604800
+
+# Allow crawling of static assets
+User-agent: *
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.eot$
