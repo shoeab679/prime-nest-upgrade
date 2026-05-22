@@ -91,9 +91,22 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
             <p className="text-sm text-gray-400">
               © {currentYear} Prime Nest Interiors. All rights reserved.
+            </p>
+            <div className="flex items-center gap-6 text-sm text-gray-400">
+              <Link href="/terms-and-conditions" className="hover:text-yellow-500 transition-colors no-hover">
+                Terms & Conditions
+              </Link>
+              <Link href="/privacy-policy" className="hover:text-yellow-500 transition-colors no-hover">
+                Privacy Policy
+              </Link>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-gray-500">
+              Designed with ❤️ for your dream home
             </p>
             <div className="flex items-center gap-4">
               <a

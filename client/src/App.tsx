@@ -15,6 +15,8 @@ import ModularKitchens from "./pages/ModularKitchens";
 import Wardrobes from "./pages/Wardrobes";
 import TVUnits from "./pages/TVUnits";
 import Contact from "./pages/Contact";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function Router() {
   return (
@@ -27,6 +29,10 @@ function Router() {
       <Route path={"/wardrobes"} component={Wardrobes} />
       <Route path={"/tv-units"} component={TVUnits} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/terms-and-conditions"} component={TermsAndConditions} />
+      <Route path={"terms-and-conditions"} component={TermsAndConditions} />
+      <Route path={"/privacy-policy"} component={PrivacyPolicy} />
+      <Route path={"privacy-policy"} component={PrivacyPolicy} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
