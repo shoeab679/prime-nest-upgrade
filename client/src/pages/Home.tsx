@@ -58,10 +58,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { number: '500+', label: 'Happy Clients' },
-    { number: '1000+', label: 'Projects Completed' },
-    { number: '15+', label: 'Years Experience' },
-    { number: '100%', label: 'Satisfaction Rate' },
+    { number: '120+', label: 'Spaces Designed' },
+    { number: '85+', label: 'Happy Clients' },
+    { number: '5+', label: 'Years Industry Experience' },
+    { number: '98%', label: 'Client Satisfaction' },
   ];
 
   const testimonials = [
