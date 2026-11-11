@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-static/
+.env
+.env.local
+.env.production
+.manus-logs/
+*.log
+.DS_Store
+Thumbs.db
+prime-nest-upgrade/
+.project-config.json
